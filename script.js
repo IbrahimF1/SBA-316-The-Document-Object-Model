@@ -111,9 +111,11 @@ const REWARD_BRAVE = 100;
 const REWARD_COWARD = 50;
 const PENALTY = 100;
 
+// Cache at least one element using querySelector or querySelectorAll.
 const startScreen = document.querySelector('#start-screen');
 const gameScreen = document.querySelector('#game-screen');
 
+// Cache at least one element using selectElementById.
 const scoreDisplay = document.getElementById('score-count')
 const streakDisplay = document.getElementById('streak-count')
 
@@ -125,48 +127,52 @@ const messageBox = document.getElementById('message-box')
 function loadQuestion() {
     const currentQuestion = questions[currentQuestionIndex]
 
+    // Modify the HTML or text content of at least one element in response to user interaction.
     questionText.textContent = currentQuestion.text
     answerContainer.innerHTML = ""
     messageBox.textContent = "Choose wisely..."
     isFateUsed = false
-    fateBtn.disabled = false
+    fateBtn.disabled = false // Modify at least one attribute of an element (re-enabling button).
 
     const fragment = document.createDocumentFragment()
 
+    // Iterate over a collection of elements to accomplish some task.
     for (const option of currentQuestion.options) {
-        const button = document.createElement('button')
+        const button = document.createElement('button') // Create at least one element using createElement.
         button.textContent = option
-        button.classList.add('answer-btn')
-        fragment.appendChild(button)
+        button.classList.add('answer-btn') // Modify the style and/or CSS classes of an element.
+        fragment.appendChild(button) // Use appendChild to add new elements to the DOM (adding to fragment).
     }
 
-    answerContainer.appendChild(fragment)
+    answerContainer.appendChild(fragment) // Use appendChild to add new elements to the DOM (adding fragment to Page).
 }
 
-const form = document.querySelector('#start-screen form')
+const form = document.querySelector('#start-screen form') // Requirement: Register at least two different event listeners (Listener 1: Submit).
 const playerInput = form.querySelector('input')
 
 form.addEventListener('submit', (e) => {
     e.preventDefault()
     playerName = playerInput.value
 
-    startScreen.classList.toggle('hidden')
+    startScreen.classList.toggle('hidden') // Modify the style and/or CSS classes of an element (hiding/showing screens).
     gameScreen.classList.toggle('hidden')
 
     loadQuestion()
 })
 
+// Register at least two different event listeners (Listener 2: Click).
 fateBtn.addEventListener('click', () => {
     const chance = 50 - (currentStreak *10)
     const roll = Math.random() * 100
 
     isFateUsed = true
-    fateBtn.disabled = true
+    fateBtn.disabled = true // Modify at least one attribute of an element in response to user interaction.
 
     if (roll < chance) {
         messageBox.textContent = "The stars align..."
-        const buttons = answerContainer.children
+        const buttons = answerContainer.children // Use the parent-child-sibling relationship (accessing children of container).
 
+        // Iterate over a collection of elements.
         for (let btn of buttons) {
             if (btn.textContent == questions[currentQuestionIndex].answer)
                 btn.classList.add('correct-border')
@@ -177,7 +183,7 @@ fateBtn.addEventListener('click', () => {
 })
 
 answerContainer.addEventListener('click', (e) => {
-    if (!e.target.matches('button'))
+    if (!e.target.matches('button')) // Use the parent-child-sibling relationship (checking if target matches specific child type).
         return
 
     const selectedButton = e.target
@@ -212,12 +218,14 @@ answerContainer.addEventListener('click', (e) => {
     for (let btn of allButtons)
         btn.disabled = true
 
+    // Use at least two Browser Object Model (BOM) properties or methods (setTimeout).
     setTimeout(() => {
         currentQuestionIndex++
 
         if (currentQuestionIndex < questions.length){
             loadQuestion()
         } else {
+            // Use at least two Browser Object Model (BOM) properties or methods (alert + location).
             alert(`Game Over ${playerName}! Final Score: ${currentScore}`)
             location.reload()
         }
