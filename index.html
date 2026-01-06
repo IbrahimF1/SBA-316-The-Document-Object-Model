@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fated Quiz</title>
+    <link rel="stylesheet" href="./style.css">
+    <script defer src="./script.js"></script>
+</head>
+
+<body>
+    <main>
+        <section id="start-screen">
+            <form>
+                <h1>Welcome</h1>
+                <input type="text" placeholder="Name" minlength="3">
+                <button type="submit">Enter</button>
+            </form>
+        </section>
+        
+        <section id="game-screen">
+            <div>
+                Score:
+                <span id="score-count">0</span>
+            </div>
+            <div>
+                Win Streak:
+                <span id="win-streak">0</span>
+            </div>
+            <h2 id="question-text">Question?</h2>
+            <div id="answer-container">
+                <!-- Fill in with JS using createElement -->
+            </div>
+            <button id="oracle-btn">Leave it to fate.</button>
+            <p id="message-box">Delete later after styling</p>
+        </section>
+    </main>
+</body>
+</html>
