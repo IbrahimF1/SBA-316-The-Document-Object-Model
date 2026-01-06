@@ -42,7 +42,7 @@ button:active {
     transform: translateY(0);
 }
 
-#oracle-btn {
+#fate-btn {
     background-color: #6c53e1;
     font-weight: bold;
     border-color: rgb(0, 0, 0);
@@ -51,12 +51,12 @@ button:active {
     border-radius: 0.4rem;
 }
 
-#oracle-btn:disabled {
+#fate-btn:disabled {
     opacity: 0.5;
     cursor: not-allowed;
 }
 
-#oracle-btn:hover {
+#fate-btn:hover {
     border-color: rgb(50, 81, 220);
     background-color: #8281e9;
 }
