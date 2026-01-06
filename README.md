@@ -1,5 +1,9 @@
 # SBA 316: The Document Object Model
 
+## Project Explanation
+
+Fate Trivia is a single-page web app that gamifies trivia and quizzes with randomized elements. Users have the option of treating it like a normal quiz or leaving their fate up to chance. User interactions are handled through event listeners, including event delegation on the answer container and form submission handling, which modify text content, toggle CSS classes (via classList to switch views and provide feedback), and manipulate attributes such as disabled to control the game state. Data integrity is ensured through a combination of HTML5 attribute validation (minlength) and DOM event validation (preventDefault), while the game loop uses BOM methods like setTimeout for transition timing and location.reload() to restart the application.
+
 ## Introduction
 
 This assessment measures your understanding of the Document Object Model (DOM) and your capability to implement its features in a practical manner. You have creative freedom in the topic, material, and purpose of the web application you will be developing, so have fun with it! However, remember to plan the scope of your project to the timeline you have been given.
