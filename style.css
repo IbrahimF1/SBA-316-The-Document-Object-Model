@@ -1,0 +1,50 @@
+body {
+    background-color: darkgrey;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.hidden {
+    display: none;
+}
+
+main {
+    background-color: grey;
+    padding: 1rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0 10rem;
+    text-align: center;
+}
+
+#oracle-btn {
+    background-color: purple;
+    font-weight: bold;
+}
+
+#oracle-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.correct {
+    background-color: green;
+    color: white;
+}
+
+.wrong {
+    background-color: red;
+    color: white;
+}
+
+.gold-border {
+    border: 0.5rem solid gold;
+
+}
+
+#answer-container {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
