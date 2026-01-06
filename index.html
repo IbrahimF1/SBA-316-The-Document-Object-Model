@@ -3,27 +3,42 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fated Quiz</title>
+    <title>Fate Trivia</title>
     <link rel="stylesheet" href="./style.css">
     <script defer src="./script.js"></script>
 </head>
 
 <body>
-    <main>
+    <section id="up"></section>
+    <section id="down"></section>
+    <section id="left"></section>
+    <section id="right"></section>
+
+    <main class="gold-border">
         <section id="start-screen">
             <form>
-                <h1>Welcome</h1>
+                <h1>Welcome to Fate Trivia!</h1>
                 <input type="text" placeholder="Name" minlength="3">
                 <button type="submit">Enter</button>
+                <h3 style="margin-top: 5%;">How to Play</h3>
+                <p class="how-to-play">1) The Goal: Answer trivia questions correctly to build your High Score and Win Streak.<p/>
+                
+                <p class="how-to-play">2) The Brave Path: Answer on your own! A correct answer awards 100 Points. A wrong answer costs nothing.</p>
+
+                <p class="how-to-play">3) The Coward's Path: Stuck? Click "Leave it to fate" for a hint. However, your reward is cut to 50 Points.</p>
+
+                <p class="how-to-play">4) The Penalty: Fate is high-stakes. If you leave it to fate and still answer incorrectly, you lose 100 Points.</p>
+
+                <p class="how-to-play">5) The Fated Twist: As your Win Streak grows, fate becomes less reliable. Trust it at your own risk!</p>
             </form>
         </section>
         
         <section id="game-screen" class="hidden">
-            <div>
+            <div class="scores">
                 Score:
                 <span id="score-count">0</span>
             </div>
-            <div>
+            <div class="scores">
                 Win Streak:
                 <span id="win-streak">0</span>
             </div>
